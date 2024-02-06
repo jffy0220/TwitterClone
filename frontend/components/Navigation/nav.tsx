@@ -32,31 +32,18 @@ const navigationItems = [
 export default function Nav() {
     return (
         <Box sx={{ display: 'flex' }}>
-            <Drawer
-                sx = {{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    '& .MuiDrawer-paper': {
-                        width: drawerWidth,
-                        boxSizing: 'border-box'
-                    }
-                }}
-                variant='permanent'
-                anchor='left'
-            >
-                <List>
-                    {navigationItems.map((item, index) => (
-                        <ListItem key={item.text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    { index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                </ListItemIcon>
-                                <ListItemText primary={item.text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
+            <List>
+                {navigationItems.map((item, index) => (
+                    <ListItem key={item.text} disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                { index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={item.text} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
         </Box>
     )
 }

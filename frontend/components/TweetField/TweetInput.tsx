@@ -1,19 +1,18 @@
 import * as React from 'react';
-import { Box, TextField, Divider, Button, Fab, Avatar, Grid, Container } from '@mui/material';
-import { AccountCircle } from "@mui/icons-material";
-import { deepOrange, blue, grey } from '@mui/material/colors';
+import { Box, TextField, Divider, Fab, Avatar, Grid, Container } from '@mui/material';
+import {  blue, grey } from '@mui/material/colors';
 
 
 export default function TweetInput() {
     return (
         <Container maxWidth="sm" sx={{ 
             border: 1, 
-            borderColor: 'grey.500',
+            borderColor: 'grey.200',
             borderRadius: 0,
             display: 'flex',
             justifyContent: 'center', 
             alignItems: 'center',
-            height: '100%',
+            height: 'auto',
             p: 2
         }}>
             <Box sx={{ width: '100%' }}>

@@ -29,19 +29,28 @@ const Tweet: React.FC<TweetProps> = ({ user, handle, date, content, views, comme
                         </Typography>
                         <Box sx={{ display: 'flex', marginTop: 1, gap: 1 }}>
                             <IconButton aria-label="add to favorites">
-                                <FavoriteBorderIcon /> {favorites}
+                                <FavoriteBorderIcon fontSize='small'/> 
+                                <Typography variant="caption" sx={{ paddingLeft: 0.5 }}>
+                                    {favorites}
+                                </Typography>
                             </IconButton>
                             <IconButton aria-label="comment">
-                                <ChatBubbleOutlineIcon /> {comments}
+                                <ChatBubbleOutlineIcon fontSize='small'/> 
+                                <Typography variant="caption" sx={{ paddingLeft: 0.5 }}>
+                                {comments}
+                                </Typography>
                             </IconButton>
                             <IconButton aria-label="reply">
-                                <ReplyIcon /> {replies}
+                                <ReplyIcon fontSize='small'/> 
+                                <Typography variant="caption" sx={{ paddingLeft: 0.5 }}>
+                                {replies}
+                                </Typography>
                             </IconButton>
                             <IconButton aria-label="bookmark">
-                                <BookmarkBorderIcon />
+                                <BookmarkBorderIcon fontSize='small'/>
                             </IconButton>
                             <IconButton aria-label="share">
-                                <ShareIcon />
+                                <ShareIcon fontSize='small'/>
                             </IconButton>
                         </Box>
                     </Grid>
